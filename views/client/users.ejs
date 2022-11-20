@@ -1,0 +1,16 @@
+<%- include('../includes/head.ejs') %>
+<title>Users</title>
+</head>
+<body>
+<%- include('../includes/navBar.ejs') %>
+<h1>Users</h1>
+<% if(users.length > 0){ %>
+    <ul>
+        <% users.forEach((user) => { %>
+            <li class="display-name__li"><span class="span-blue">Full name:&nbsp;</span> <%= user.displayName %></li>
+        <% }) %>
+    </ul>
+<% }else{ %>
+    <p>Users not exists</p>
+<% } %>
+<%- include('../includes/footer.ejs') %>
